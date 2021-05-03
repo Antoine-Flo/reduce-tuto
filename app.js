@@ -1,43 +1,43 @@
 /////// Addition avec boucle////////
 
-// const input = [1, 2, 3, 4, 5, 6]
+const input = [1, 2, 3, 4, 5, 6]
 
-// let acc = 0;
-// for(num of input) {
-//     console.log(`Acc: ${acc}, Num: ${num}`)
-//     acc += num
-// }
+let acc = 0;
+for(num of input) {
+    console.log(`Acc: ${acc}, Num: ${num}`)
+    acc += num
+}
 
-// console.log(acc)
+console.log(acc)
 
 /////// Addition avec reduce ///////
 
-// const input = [1, 2, 3, 4, 5, 6]
+const input = [1, 2, 3, 4, 5, 6]
 
-// const output = input.reduce((acc, val, i) => {
-//     console.log(`|${i}| ${acc} + ${val} = ${acc + val}`)
-//     return acc + val
-// })
+const output = input.reduce((acc, val, i) => {
+    console.log(`|${i}| ${acc} + ${val} = ${acc + val}`)
+    return acc + val
+})
 
-// console.log(output)
+console.log(output)
 
 ///// Transformer en objet /////
 
-// const input = ["🦊", "🦝", "🦍"]
-// const color = ["Orange", "Gris", "Noir"]
-// const output = input.reduce((acc, val, i) => ({...acc, [color[i]] : val}), {})
+const input = ["🦊", "🦝", "🦍"]
+const color = ["Orange", "Gris", "Noir"]
+const output = input.reduce((acc, val, i) => ({...acc, [color[i]] : val}), {})
 
-// console.log(output)
+console.log(output)
 
 ////////// Map //////////
 
-// const input = [1, 2, 3]
+const input = [1, 2, 3]
 
-// const mapLike = (arr, fn) => arr.reduce((acc, x) => acc.concat(fn(x)), [])
+const mapLike = (arr, fn) => arr.reduce((acc, x) => acc.concat(fn(x)), [])
 
-// const output = mapLike(input, x => x + 1)
+const output = mapLike(input, x => x + 1)
 
-// console.log(output)
+console.log(output)
 
 ///////// Pipe function  /////////
 // Eric Elliott
@@ -55,6 +55,3 @@ const pipe = (...fns) => x => fns.reduce((v, f) => {
 const output = pipe(add, divide)(input)
 
 console.log(output)
-const ok = () => {}; const all = () => {}
-const test = (...fn) => console.log(fn)
-test(ok, all)
