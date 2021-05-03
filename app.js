@@ -27,6 +27,9 @@ const input = ["🦊", "🦝", "🦍"]
 const color = ["Orange", "Gris", "Noir"]
 const output = input.reduce((acc, val, i) => ({...acc, [color[i]] : val}), {})
 
+const input = ["a", "b", 45, 4, 45, "a"]
+const output = input.reduce((a, v) => ({...a, [v]: ++[v] || 1}), {})
+
 console.log(output)
 
 ////////// Map //////////
