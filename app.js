@@ -1,3 +1,8 @@
+
+const data = [1, 2, 3, 4, 5, 6]
+
+const sum = data.reduce
+
 /////// Addition avec boucle////////
 
 const input = [1, 2, 3, 4, 5, 6]
